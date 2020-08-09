@@ -1,7 +1,7 @@
 from django.db import models
 from shop.models import Product
 
-
+#creating a model to store the order details and a second model to store the items bought
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)

@@ -2,7 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from shop.models import Product
 
-
+#adding the cart class that will allow to manage the shopping cart
 class Cart(object):
 
     def __init__(self, request):
@@ -23,7 +23,7 @@ class Cart(object):
         else:
             self.cart[product_id]['quantity'] += quantity
         self.save()
-
+#adding a method for removing products from the cart
     def remove(self, product):
         product_id = str(product.id)
         if product_id in self.cart:
@@ -32,7 +32,7 @@ class Cart(object):
 
     def save(self):
         self.session.modified = True
-
+# iterating through the items contained in the cart and access the related Product instances
     def __iter__(self):
         product_ids = self.cart.keys()
         products = Product.objects.filter(id__in=product_ids)
@@ -48,7 +48,7 @@ class Cart(object):
 
     def __len__(self):
         return sum(item['quantity'] for item in self.cart.values())
-
+#adding a method for calculating the total cost of the items in the cart
     def get_total_price(self):
         return sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
 

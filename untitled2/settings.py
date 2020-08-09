@@ -125,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+# Adding the key to use to store the cart in the user session
 CART_SESSION_ID = 'cart'
 
 BRAINTREE_MERCHANT_ID = 's959ybqx65t5pnck'

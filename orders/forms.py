@@ -1,7 +1,7 @@
 from django import forms
 from .models import Order
 
-
+#creating a form to enter the order details
 class OrderCreateForm(forms.ModelForm):
     class Meta:
         model = Order

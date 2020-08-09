@@ -1,3 +1,4 @@
+#Defining URL patterns after building the product list and detail views
 from django.urls import path
 from . import views
 
