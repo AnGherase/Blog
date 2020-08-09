@@ -1,5 +1,5 @@
-#adding URL patterns for the views to add items to the cart, update quantities, remove items
- django.urls import path
+# adding URL patterns for the views to add items to the cart, update quantities, remove items
+from django.urls import path
 from . import views
 
 app_name = 'cart'
