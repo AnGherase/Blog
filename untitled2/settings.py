@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'k9ad%frzvect+#(yybuhc$yz#rl9r)!(swt7w35v6c7@n-t3px'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -91,10 +91,6 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-# }
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -137,9 +133,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Adding the key to use to store the cart in the user session
 CART_SESSION_ID = 'cart'
 
-BRAINTREE_MERCHANT_ID = 's959ybqx65t5pnck'
-BRAINTREE_PUBLIC_KEY = '7mkwst6synxqfnvv'
-BRAINTREE_PRIVATE_KEY = 'fb5246c465de4c782f876389898cf1af'
+BRAINTREE_MERCHANT_ID = os.environ.get('M_ID')
+BRAINTREE_PUBLIC_KEY = os.environ.get('PUB')
+BRAINTREE_PRIVATE_KEY = os.environ.get('PRI')
 
 import braintree
 
