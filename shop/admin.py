@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Category, Product
 
-#adding order models to the administration site
+# adding order models to the administration site
 admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug']

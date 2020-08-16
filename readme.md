@@ -1,6 +1,6 @@
 # What does it do and what does it fulfill?
 This project uses skills to build a full-stack website around business logic and centrally-owned dataset. The purpose of creating this platform was for the users to view be able to shop for products. Users can also search for products that contain the searched word in its tags, title or description. So in essence Andreea’s Shop is a website created to give users access and full control over their orders. The platform features amazing colors and pictures from catalogues. The project can be viewed at: 
-https://5000-f92ac333-e2f4-4356-b046-e5e1c9cfbca1.ws-eu01.gitpod.io/
+https://github.com/AnGherase/Blog
 ## UX
 ### Project purpose
 The goal of Andreea’s website is to give users full access and control over their orders connected to the ability to choose from the desired products catalogue. This means they can create orders, view all orders, update, and delete any order.
@@ -19,14 +19,14 @@ The sample flow consists of the following steps:
 •	Blog section of interest;
 •	Interaction;
 •	Completes input.
-The goals when designing a user interface were to have it fast, simple and goal-oriented, useful/useable and delightful, authentic/appealing.
+The goals when designing a user interface were to have it fast, simple and goal-oriented, useful/usable and delightful, authentic/appealing.
 The following design principles were followed:
 1.	Consistency helps the user to find what they are looking for. Users learn faster how the system works. This is achieved through patterns-using the same pattern whenever possible (e.g. the same position of buttons or side bar). It is also achieved by using known order principles (conventional, frequency of use, order of use, categorical, alphabetical). The same icons are used for the same actions.
 2.	Hierarchy helps the user to understand the relationship and importance of elements and reduces complexity. It is achieved by using proximity-positioning elements close to each other to achieve the group look.
 3.	Visual clarity-helps the User to achieve his goal fast and efficient and is accomplished through:
 •	using white space, 
 •	simplification and using less information,
-•	 shorter sentences and using fewer words, 
+•	shorter sentences and using fewer words, 
 •	positioning elements in fewer directions (also important inside of the elements);
 •	strategic usage of color
 •	good readability and contrast
@@ -56,7 +56,7 @@ Some of the features left to implement include:
 5.	Error 404 page-if at any time the user had inputted a value in the URL that has not been found, a 404 page will be presented and it will show the user a message that they got lost and will have a button which will lead them to the home page.
 
 ### Database
-The database used for this project was sQL database called MongoDB as required. The data used are: ObjectID, String, Int32. A database was created called 'myProducts' which contains a collection called products which is where each piece of data for each product is stored. The data structure is as follows:
+The database used for this project was SQLite database called MongoDB as required. The data used are: ObjectID, String, Int32. A database was created called 'myProducts' which contains a collection called products which is where each piece of data for each product is stored. The data structure is as follows:
 ### Technologies used
 I used the following languages, frameworks, libraries to construct this project:
 •	HTML5-used for structuring and presenting the content (main navigation menu which will handle the clothing dropdowns)
@@ -69,6 +69,11 @@ I used the following languages, frameworks, libraries to construct this project:
 •	Github-used as a remote backup of code used in the project and for version control
 •	Braintree-integrating the payment gateway into the project
 ### Deployment
+This section describes the process I went through to deploy the project to a hosting platform (Heroku). The website was created in Gitpod, a local Git directory was used for version control and then uploaded to Github.  The details of the database connection are found inside the requirements.txt -it uses the os class environ method to point to its own config available in order to keep the production database connection string secret. There were no differences between the deployed version and the development version.
+
+The following had to be installed on the computer before deployment: PIP, Python 3, Git, as well as having an account in MongoDB Atlas.
+
+The deployment to Heroku consisted mainly of the following steps: adding a requirements.txt file by using the command "sudo pip3 freeze-local> requirements.txt " which will add all the components needed to be used for the project; using "git add" to commit the changes ready to push to Github; creating the repository in Github and following the instruction in order to push the work up to Github; using "git push" and entering the email and password when instructed which will push all the files which have been committed up to Github; signing in to Heroku; creating a new app inside Heroku and then going to "Deploy" and scrolling down the list of instructions given to deploy the project in Heroku; viewing the project in Heroku by clicking "Open App".
 ### Testing
 By testing I checked that all the user stories from the UX section worked as intended, with the project providing an easy and straightforward way for the users to achieve their goals. My tests checked the page loading, as well as the business logic of the views. The testing process can be described via scenarios.
 The Create Order cart page was tested by checking that a product was entered, the page redirects and the new product is featured on the index page. The Products page is tested by searching for any products on the products page, getting its ID number and going to that Products details page and changing some data and committing it. This then redirects the user to the Index page and that is tested that the information has changed on that product. The Delete Orders page is tested by going to its products details page and deleting it, then checking that the redirect has happened and that the product does not appear on the index page. It is impossible to cover everything in testing, but the majority of elements were tested. My focus was on keeping the design usable and simple to navigate. As the site is built with responsive design, it works for mobile devices and I have checked it on iphones 6 to x, Smsung galaxy, ipads (mini to pro), Google's pixel 2 and 3. I also tested it on several browsers (Chrome, Explorer, Edge).

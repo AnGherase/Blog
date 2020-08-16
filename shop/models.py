@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-#creating a model to store order details
+# creating a model to store order details
 
 class Category(models.Model):
     name = models.CharField(max_length=200, db_index=True)
