@@ -42,7 +42,7 @@ In order to improve the user experience for the blog section, I gave focus to th
 -creating feeds for the blog posts;
 -adding full-text search to the blog (including multiple search fields)
 ### Functionality of project
-The website is fully responsive and uses MongoDB for the users and products collection. Logged in users are able to create, update (edit) and delete their own products. Any user can search for products using the search box. A user can also log out. The Products page shows all products in order of the amount of views each product has. The pagination of the products is done by the database. Each product on the products page can be clicked onto and that will load the single products page which shows the entire entry. If the user created/added the product on this page, they will not be able to edit and delete this product. The add product allows the logged in user to create a product and enter it onto the database. Django was used to set up an user authentication system and user account system which has been tested.
+Logged in users are able to create, update (edit) and delete their own products. Any user can search for products using the search box. A user can also log out. The Products page shows all products in order of the amount of views each product has. The pagination of the products is done by the database. Each product on the products page can be clicked onto and that will load the single products page which shows the entire entry. If the user created/added the product on this page, they will not be able to edit and delete this product. The add product allows the logged in user to create a product and enter it onto the database. Django was used to set up an user authentication system and user account system which has been tested.
 ### Pagination features
 Are reflected on the Home Page, Products Listing Page, actual Products Page, Add Products Page, Delete Products Page, Update Products Page. When the user arrives at the Products page, they are presented with the entire product, showing the products name, products image, product description, brand. A delete button has been included so that the user has the option to delete the film and a detailed instruction on how to do so has been included.
 When the user arrives at the Add Product to cart page, they are presented with a form which will show the following fields: Product Name, Product Description, Product Image URL, Add to cart 'button'.
@@ -55,8 +55,6 @@ Some of the features left to implement include:
 4.	Search page-where the user would be presented with a title showing how many search items have been found of whatever query was inputted into the search field. Then the user would be given the option to search for another item. If no results had been found then the user would be informed of that.
 5.	Error 404 page-if at any time the user had inputted a value in the URL that has not been found, a 404 page will be presented and it will show the user a message that they got lost and will have a button which will lead them to the home page.
 
-### Database
-The database used for this project was SQLite database called MongoDB as required. The data used are: ObjectID, String, Int32. A database was created called 'myProducts' which contains a collection called products which is where each piece of data for each product is stored. The data structure is as follows:
 ### Technologies used
 I used the following languages, frameworks, libraries to construct this project:
 •	HTML5-used for structuring and presenting the content (main navigation menu which will handle the clothing dropdowns)
@@ -64,7 +62,6 @@ I used the following languages, frameworks, libraries to construct this project:
 •	JavaScript-used for creating the web page and enhancing user experience
 •	Python
 •	Django-used for building the project backend by a relational database to create a website that allows users to store and manipulate data records about the domain. In this case it was used for building the shopping cart to allow users to keep selected products while they browse the site
-•	MySQL-relational database
 •	jQuery-used to make it easier to use JavaScript on the website, to simplify DOM manipulation
 •	Github-used as a remote backup of code used in the project and for version control
 •	Braintree-integrating the payment gateway into the project
