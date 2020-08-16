@@ -1,6 +1,6 @@
 # What does it do and what does it fulfill?
 This project uses skills to build a full-stack website around business logic and centrally-owned dataset. The purpose of creating this platform was for the users to view be able to shop for products. Users can also search for products that contain the searched word in its tags, title or description. So in essence Andreea’s Shop is a website created to give users access and full control over their orders. The platform features amazing colors and pictures from catalogues. The project can be viewed at: 
-https://github.com/AnGherase/Blog
+https://shop-milestone-4.herokuapp.com/
 ## UX
 ### Project purpose
 The goal of Andreea’s website is to give users full access and control over their orders connected to the ability to choose from the desired products catalogue. This means they can create orders, view all orders, update, and delete any order.
